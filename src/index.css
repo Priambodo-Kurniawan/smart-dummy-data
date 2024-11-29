@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font smaller on small device */
+@media (max-width: 640px) {
+    html {
+        font-size: 12px;
+    }
+}
