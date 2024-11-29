@@ -3,7 +3,7 @@
 <!-- link deploy here -->
 
 See live demo:
-[Deployed Site](https://smart-way-to-create-dummy-data.netlify.app/)
+[Deployed Site](https://smart-dummy-data.web.app/)
 
 preview:
 ![Preview](./result.png)
@@ -15,8 +15,8 @@ This project is a minimal template to demonstrate how to create dummy data for a
 1. Clone this repository:
 
     ```sh
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/Priambodo-Kurniawan/smart-dummy-data.git
+    cd smart-dummy-data
     ```
 
 2. Install dependencies:
