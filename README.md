@@ -2,7 +2,7 @@
 
 ### See live demo:
 
-Try demo here: [Deployed Site on Firebase](https://smart-dummy-data.web.app/)
+Try demo here: [Deployed Site on Firebase](https://smart-dummy-data-v2.web.app/)
 
 ### Preview:
 
