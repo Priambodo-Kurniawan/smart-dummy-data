@@ -19,7 +19,13 @@ This project is a minimal template to demonstrate how to create dummy data for a
     cd smart-dummy-data
     ```
 
-2. Install dependencies:
+2. Checkout to the `feat/text-placeholder` branch:
+
+    ```sh
+    git checkout feat/text-placeholder
+    ```
+
+3. Install dependencies:
     ```sh
     npm install
     ```
