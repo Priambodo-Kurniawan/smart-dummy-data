@@ -7,13 +7,6 @@ const ProductCard = ({ item }) => {
     return (
         <div className="flex items-center border-b pb-4 mb-4 md:flex-row flex-col gap-4">
             <div className="flex items-center flex-1 w-full">
-                {/* <img
-                    src={`https://pollinations.ai/p/${encodeURIComponent(
-                        imagePrompt
-                    )}?width=${500}&height=${500}&nologo=true&model=turbo`}
-                    alt={item.description}
-                    className="w-32 h-32 rounded-md object-cover"
-                /> */}
                 <ImageWithFallback
                     src={`https://pollinations.ai/p/${encodeURIComponent(
                         imagePrompt
@@ -42,7 +35,7 @@ const ProductCard = ({ item }) => {
                     </p>
                 </div>
             </div>
-            <div className="flex w-full md:w-1/2 justify-between">
+            <div className="flex w-full md:w-2/5 justify-between">
                 <div className="flex items-center">
                     <button
                         className="text-gray-500 px-2"
