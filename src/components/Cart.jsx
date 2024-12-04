@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { AIContext } from "../context/AIContext";
-import ProductCardLoading from "./ProductCardLoading";
+import ProductCardLoader from "./ProductCardLoader";
 import JSONViewer from "./JSONViewer";
 
 const items = [
@@ -58,7 +58,7 @@ const Cart = () => {
         <div className="max-w-3xl w-full mx-auto bg-white md:p-6 p-4 rounded-lg shadow mt-5">
             <h1 className="text-2xl font-bold mb-5">Products</h1>
             {loading &&
-                [1, 2, 3].map((index) => <ProductCardLoading key={index} />)}
+                [1, 2, 3].map((index) => <ProductCardLoader key={index} />)}
             {!loading && !cartItems.length && (
                 <p className="text-center">No products found</p>
             )}

@@ -1,4 +1,4 @@
-const ProductCardLoading = () => {
+const ProductCardLoader = () => {
     return (
         <div className="animate-pulse flex items-center border-b pb-4 mb-4 md:flex-row flex-col gap-4">
             <div className="flex items-center flex-1 w-full">
@@ -22,4 +22,4 @@ const ProductCardLoading = () => {
     );
 };
 
-export default ProductCardLoading;
+export default ProductCardLoader;
