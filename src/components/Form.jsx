@@ -34,7 +34,12 @@ const Form = () => {
             );
 
             await getResponse(
-                [{ question: "apa pekerjaanmu?", answer: yourJob }],
+                [
+                    {
+                        question: "apa pekerjaanmu?",
+                        answer: `pekerjaan user adalah: ${yourJob}. Tolong buatkan dummy data produk yang sesuai`,
+                    },
+                ],
                 prompt
             );
         } catch (error) {
