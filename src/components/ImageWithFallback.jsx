@@ -10,7 +10,7 @@ const ImageWithFallback = ({ src, alt, className, errorImage }) => {
         <div className="relative">
             {/* Show a loading placeholder while the image is loading */}
             {imageStatus === "loading" && (
-                <div className="animate-pulse rounded-md absolute inset-0 flex items-center justify-center bg-gray-200">
+                <div className="animate-pulse rounded-md absolute inset-0 flex items-center justify-center bg-gray-200 z-50">
                     <p className="opacity-30">Loading...</p>
                 </div>
             )}

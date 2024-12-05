@@ -23,7 +23,7 @@ const Form = () => {
                     tag: "Kategori atau label produk (String).",
                     quantity: "Jumlah stok tersedia (Integer). Max 10 items",
                     price: "Harga produk (Integer).",
-                    currency: "Mata uang harga produk (String).",
+                    currency: "Code mata uang harga produk (String). Mata uang yang valid.",
                 }. Berikan response dalam format JSON. { products: [ { product1 }, { product2 }, { product3 } ] }`;
 
             // set yourJob to query search params url (URLSearchParams)
