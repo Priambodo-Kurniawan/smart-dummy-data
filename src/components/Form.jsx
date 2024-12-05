@@ -1,8 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AIContext } from "../context/AIContext";
 
 const Form = () => {
-    const [yourJob, setYourJob] = useState("");
+    // get job from search query params url
+    const urlParams = new URLSearchParams(window.location.search);
+    const job = urlParams.get("job");
+
+    const [yourJob, setYourJob] = useState(job || "");
     const { getResponse, loading } = useContext(AIContext);
 
     const handleAnswerSubmit = async (e) => {
@@ -21,6 +25,14 @@ const Form = () => {
                     price: "Harga produk (Integer).",
                     currency: "Mata uang harga produk (String).",
                 }. Berikan response dalam format JSON. { products: [ { product1 }, { product2 }, { product3 } ] }`;
+
+            // set yourJob to query search params url (URLSearchParams)
+            window.history.replaceState(
+                null,
+                "",
+                `?job=${encodeURIComponent(yourJob)}`
+            );
+
             await getResponse(
                 [{ question: "apa pekerjaanmu?", answer: yourJob }],
                 prompt
@@ -29,6 +41,14 @@ const Form = () => {
             console.error("Error getting AI response:", error.message);
         }
     };
+
+    useEffect(() => {
+        if (job) {
+            // trigger submit button form if job is available
+            const button = document.querySelector("button[type=submit]");
+            button.click();
+        }
+    }, []);
 
     return (
         <div className="max-w-3xl w-full mx-auto bg-white md:p-6 p-4 rounded-lg shadow">
@@ -88,7 +108,10 @@ const Form = () => {
                     </button>
                 )}
                 {!loading && (
-                    <button className="w-full bg-amber-600 rounded py-2 text-white mt-4">
+                    <button
+                        className="w-full bg-amber-600 rounded py-2 text-white mt-4"
+                        type="submit"
+                    >
                         Submit
                     </button>
                 )}
