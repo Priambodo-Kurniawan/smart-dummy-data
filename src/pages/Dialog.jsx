@@ -1,7 +1,6 @@
-import TextBuble from "../components/TextBuble";
-import { useEffect } from "react";
+import TextBuble from "../components/TextBubble";
 import useAiPollinations from "../hooks/useAiPollinations";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Dialog() {
     const [dialog, setDialog] = useState([]);
