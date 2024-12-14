@@ -6,7 +6,7 @@ Try demo here: [Deployed Site on Firebase](https://codebeast.web.app/dialog)
 
 ### Preview:
 
-![Preview](./screenshots/dialog-generator.png.png)
+![Preview](./screenshots/dialog-generator.png)
 
 This project is a web application that generates a conversation between two / more people using an AI model. The AI model is trained on a dataset of dialogues and can generate responses based on the input message. The application allows users to interact with the chatbot by typing messages and receiving responses from the AI model.
 
